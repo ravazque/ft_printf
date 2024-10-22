@@ -1,68 +1,53 @@
 # ft_printf
+The **ft_printf** project consists of the creation of a function that replicates the behavior of the standard **printf** function in C. The main objective of this project is to learn how to work with functions that accept an indefinite number of arguments by using variadic functions in C.
+  
+‎
 
-El proyecto **ft_printf** consiste en la creación de una función que replica el comportamiento de la función estándar **printf** en C. El objetivo principal de este proyecto es aprender a trabajar con funciones que aceptan un número indefinido de argumentos mediante el uso de funciones variádicas en C.
+## Functionality
+The **ft_printf** function not only prints characters, but also returns the number of characters printed. For example, in the call:
 
-‎  
-
-## Funcionalidad
-La función **ft_printf** no solo imprime caracteres, sino que también devuelve la cantidad de caracteres impresos. Por ejemplo, en la llamada:
-
-
-`printf("Hola %s", "mundo");`
-
-Se imprimirá: `Hola mundo`, y se devolverá el valor **10**, que es la cantidad total de caracteres impresos.
+`printf(“Hello %s”, “world”);`
+It will print: `Hello world`, and return the value **10**, which is the total number of characters printed.
 
 ‎
 
-## Formatos soportados
-El comportamiento de la función **ft_printf** dependerá de los especificadores de formato en la cadena de entrada. Estos son los formatos que deberás implementar:
-
-- `%c` ➜ Imprime un solo carácter.
-- `%s` ➜ Imprime una cadena de caracteres (string).
-- `%p` ➜ Imprime un puntero en formato hexadecimal.
-- `%d` | `%i` ➜ Imprime números enteros en base 10.
-- `%u` ➜ Imprime un número sin signo en base 10.
-- `%x` ➜ Imprime un número hexadecimal en minúsculas.
-- `%X` ➜ Imprime un número hexadecimal en mayúsculas.
-- `%%` ➜ Imprime el símbolo `%`.
-
-Estos son los formatos necesarios para la versión obligatoria de **ft_printf**. El proyecto puede expandirse con funciones adicionales si decides hacer el **bonus**.
+## Supported formats
+The behavior of the **ft_printf** function will depend on the format specifiers in the input string. These are the formats you will need to implement:
+- `%c` ➜ Prints a single character.
+- `%s` ➜ Prints a string.
+- `%p` ➜ Prints a pointer in hexadecimal format.
+- `%d` | `%i` ➜ Prints integers in base 10.
+- `%u` ➜ Prints an unsigned number in base 10.
+- `%x` ➜ Prints a lowercase hexadecimal number.
+- `%X` ➜ Prints an uppercase hexadecimal number.
+- `%%` ➜ Prints the symbol `%`.
+These are the required formats for the mandatory version of **ft_printf**. The project can be expanded with additional functions if you decide to make the **bonus**.
 
 ‎
 
-## Uso de argumentos variádicos
-La implementación de **ft_printf** requiere manejar una cantidad indefinida de argumentos. Para esto, se utilizan macros de la librería **`<stdarg.h>`**, que permite acceder y gestionar estos argumentos de forma eficiente.
-
-Las principales macros son:
-
-- **`va_start`** ➜ Inicializa la lista de argumentos variables. Debe ser usada con un **`va_list`** e indicarse el último parámetro fijo de la función.
-
+## Use of variadic arguments
+The implementation of **ft_printf** requires handling an indefinite number of arguments. For this, macros from the **`<stdarg.h>`** library are used, which allows to access and manage these arguments efficiently.
+The main macros are:
+- **`va_start`** ➜ Initializes the variable argument list. It must be used with a **`va_list`** and the last fixed parameter of the function must be specified.
     ```c
     va_start(ap, n);
     ```
-
-- **`va_arg`** ➜ Recupera el siguiente argumento de la lista, especificando su tipo.
-
+- **`va_arg`** ➜ Retrieves the next argument from the list, specifying its type.
     ```c
     int x = va_arg(ap, int);
     ```
-
-- **`va_copy`** ➜ Crea una copia de la lista de argumentos variables.
-
+- **``va_copy`** ➜ Creates a copy of the variable argument list.
     ```c
     va_copy(copy, ap);
     ```
-
-- **`va_end`** ➜ Libera los recursos utilizados por **`va_list`** al finalizar el procesamiento de los argumentos.
-
+- **`va_end`** ➜ Frees the resources used by **`va_list`** at the end of argument processing.
     ```c
     va_end(ap);
     ```
+These macros are essential for implementing functions such as **ft_printf**, as they allow you to manage a list of parameters that can vary in number and type.
 
-Estas macros son esenciales para implementar funciones como **ft_printf**, ya que permiten gestionar una lista de parámetros que puede variar en número y tipo.
-
+‎
 
 ----
-
 > [!NOTE]
-> **ft_printf** es un proyecto fundamental para entender las funciones variádicas en C y nos ayudará a mejorar nuestras habilidades de programación para futuros proyectos más complejos.
+> **ft_printf** is a fundamental project to understand variadic functions in C and will help us to improve our programming skills for future more complex projects.
