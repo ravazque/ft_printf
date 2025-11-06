@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make fclean:*)",
+      "Bash(make:*)",
+      "Bash(cc:*)",
+      "Bash(./test_bonus)",
+      "Bash(./test_edge:*)",
+      "Bash(ar -t:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
