@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ravazque <ravazque@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 11:06:55 by ravazque          #+#    #+#             */
-/*   Updated: 2025/11/06 18:20:48 by ravazque         ###   ########.fr       */
+/*   Created: 2025/11/03 10:15:22 by ravazque          #+#    #+#             */
+/*   Updated: 2025/11/09 16:42:18 by ravazque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdlib.h>
 # include <unistd.h>
 
 # define BUFFER_SIZE 1024
-
-typedef struct s_flags
-{
-	int	minus;
-	int	zero;
-	int	dot;
-	int	hash;
-	int	space;
-	int	plus;
-	int	width;
-	int	precision;
-}	t_flags;
 
 typedef struct s_buffer
 {
@@ -45,25 +32,11 @@ void	buffer_add_char(t_buffer *buf, char c);
 void	buffer_add_str(t_buffer *buf, char *str, int len);
 int		buffer_flush(t_buffer *buf);
 
-void	flags_init(t_flags *flags);
-int		parse_flags(const char *format, int *i, t_flags *flags, va_list args);
-
-void	print_char(t_buffer *buf, t_flags *flags, char c);
-void	print_str(t_buffer *buf, t_flags *flags, char *str);
-void	print_nbr(t_buffer *buf, t_flags *flags, int n);
-void	print_unsigned(t_buffer *buf, t_flags *flags, unsigned int n);
-void	print_hex(t_buffer *buf, t_flags *flags, unsigned long num, int upper);
-void	print_ptr(t_buffer *buf, t_flags *flags, void *ptr);
-void	print_percent(t_buffer *buf, t_flags *flags);
-
-int		ft_strlen(char *str);
-int		ft_numlen(long n, int base);
-int		ft_atoi(const char *str);
-int		is_flag(char c);
-int		is_conversion(char c);
-
-void	pad_width(t_buffer *buf, int width, int zero);
-void	put_sign(t_buffer *buf, int n, t_flags *flags);
-void	put_prefix(t_buffer *buf, t_flags *flags, int upper);
+void	ft_print_char(t_buffer *buf, int c);
+void	ft_print_str(t_buffer *buf, char *str);
+void	ft_print_nbr(t_buffer *buf, int n);
+void	ft_print_unsigned(t_buffer *buf, unsigned int n);
+void	ft_print_hex(t_buffer *buf, unsigned int num, int upper);
+void	ft_print_ptr(t_buffer *buf, void *ptr);
 
 #endif

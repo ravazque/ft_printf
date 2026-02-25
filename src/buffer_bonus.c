@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   buffer.c                                          :+:      :+:    :+:   */
+/*   buffer_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ravazque <ravazque@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 14:30:17 by ravazque          #+#    #+#             */
-/*   Updated: 2025/11/08 15:55:42 by ravazque         ###   ########.fr       */
+/*   Created: 2025/11/10 14:20:18 by ravazque          #+#    #+#             */
+/*   Updated: 2025/11/12 11:45:29 by ravazque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../include/ft_printf_bonus.h"
 
 void	buffer_init(t_buffer *buf)
 {

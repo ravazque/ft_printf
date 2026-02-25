@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flags.c                                            :+:      :+:    :+:   */
+/*   flags_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ravazque <ravazque@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 00:00:00 by ravazque          #+#    #+#             */
-/*   Updated: 2025/11/06 18:20:41 by ravazque         ###   ########.fr       */
+/*   Created: 2025/11/11 15:40:55 by ravazque          #+#    #+#             */
+/*   Updated: 2025/11/15 13:20:37 by ravazque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../include/ft_printf_bonus.h"
 
 void	flags_init(t_flags *flags)
 {

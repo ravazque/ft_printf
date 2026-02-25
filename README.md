@@ -182,18 +182,26 @@ cc -Wall -Wextra -Werror your_program.c libftprintf.a
 ```
 ft_printf/
 ├──┬ include/
-│  └── ft_printf.h                      # Header file with prototypes and definitions
+│  ├── ft_printf.h                      # Mandatory header
+│  └── ft_printf_bonus.h                # Bonus header with t_flags and t_buffer
 ├──┬ src/
-│  ├── ft_printf.c                      # Main printf function implementation
-│  ├── buffer.c                         # Buffer management functions
-│  ├── flags.c                          # Flag parsing and initialization
-│  ├── utils.c                          # Utility functions (strlen, atoi, etc.)
-│  ├── format_helpers.c                 # Helper functions for formatting
-│  ├── print_char.c                     # Character and string printing
-│  ├── print_number.c                   # Number printing (signed/unsigned)
-│  ├── print_hex.c                      # Hexadecimal printing
-│  └── print_ptr.c                      # Pointer printing
-├── Makefile                            # Compilation rules
+│  ├── buffer.c                         # Mandatory: buffer management
+│  ├── ft_printf.c                      # Mandatory: main printf function
+│  ├── print_char.c                     # Mandatory: character and string printing
+│  ├── print_hex.c                      # Mandatory: hexadecimal printing
+│  ├── print_number.c                   # Mandatory: signed/unsigned number printing
+│  ├── print_ptr.c                      # Mandatory: pointer printing
+│  ├── buffer_bonus.c                   # Bonus: buffer management
+│  ├── flags_bonus.c                    # Bonus: flag parsing
+│  ├── format_helpers_bonus.c           # Bonus: padding and sign helpers
+│  ├── ft_printf_bonus.c                # Bonus: main printf with flag dispatch
+│  ├── print_char_bonus.c               # Bonus: char/string/percent with flags
+│  ├── print_hex_bonus.c                # Bonus: hex with flags and # prefix
+│  ├── print_number_bonus.c             # Bonus: signed number with flags
+│  ├── print_ptr_bonus.c                # Bonus: pointer with width flag
+│  ├── print_unsigned_bonus.c           # Bonus: unsigned number with flags
+│  └── utils_bonus.c                    # Bonus: utility functions
+├── Makefile                            # Compilation rules (all, bonus, clean, fclean, re)
 └── README.md                           # Project documentation
 ```
 

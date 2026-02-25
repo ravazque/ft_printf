@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format_helpers.c                                   :+:      :+:    :+:   */
+/*   format_helpers_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ravazque <ravazque@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 00:00:00 by ravazque          #+#    #+#             */
-/*   Updated: 2025/11/06 18:20:39 by ravazque         ###   ########.fr       */
+/*   Created: 2025/11/12 10:25:17 by ravazque          #+#    #+#             */
+/*   Updated: 2025/11/14 18:10:22 by ravazque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../include/ft_printf_bonus.h"
 
 void	pad_width(t_buffer *buf, int width, int zero)
 {
