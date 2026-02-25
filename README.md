@@ -157,6 +157,9 @@ cd ft_printf
 # Compile the library
 make
 
+# Compile the bonus part
+make bonus
+
 # Clean object files
 make clean
 
